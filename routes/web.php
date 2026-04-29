@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OperacionesController;
+use App\Http\Controllers\ConsultasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +15,10 @@ use App\Http\Controllers\OperacionesController;
 |
 */
 
-// Route::get('/isabel', function () {
-//     return view('welcome');
-// });
 
-// Route::get('/camila', function () {
-//     return view('holaMundo');
-// });
+
+Route::get('consultas',[ConsultasController::class,'consulta']);
+
 
 Route::get('operacionesSumar/{num1}/{num2}',[OperacionesController::class,'sumar']);
 Route::get('operacionesRestar',[OperacionesController::class,'restar']);
