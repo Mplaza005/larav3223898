@@ -17,6 +17,6 @@ class OperacionesController extends Controller
     public function restar()
     {
 
-        return "hola desde restar..";
+        return view('category.create');
     }
 }

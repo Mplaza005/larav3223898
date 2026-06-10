@@ -19,13 +19,12 @@ class ConsultasController extends Controller
     //  return $post->user;
     //  return $post->category;
 
-    //   $user = new User();//crearme un objeto del tipo de dato a consultar
-    //   $user=User::find(2);
-    //   //return $user->profile;
+       $user = new User();//crearme un objeto del tipo de dato a consultar
+       $user=User::find(2);
+       return $user->profile;
     //   return $user->posts;
 
       $categories = Category::with(['posts.user'])->get();
-
       return  $categories;
 
     }
