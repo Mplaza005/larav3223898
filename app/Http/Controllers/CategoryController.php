@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\models\Category;
 
 class CategoryController extends Controller
 {
@@ -13,8 +14,16 @@ class CategoryController extends Controller
 
     }
 
-    public function store(){
-    return "hola desde store..";
+    public function store(Request $request){
+
+    $category = new Category();
+
+    $category->name=$request->name;
+    $category->save();
+
+    return $category;
+
+
 
     }
 }
