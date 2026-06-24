@@ -57,6 +57,10 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Models\Role');
     }
 
+     //Relacion Uno a Muchos
+    public function products(){
+        return $this->hasMany('App\Models\Product');
+    }
 
 
 }

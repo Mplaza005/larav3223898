@@ -13,11 +13,19 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            //campos
+            //campos de la tabla
             $table->string('nombre');
             $table->integer('precio');
             $table->integer('peso');
             $table->integer('tamano');
+            //creamos el campo para albergar la llave foranea
+            $table->unsignedBigInteger('user_id')->unique();
+            //crear la referencia
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }

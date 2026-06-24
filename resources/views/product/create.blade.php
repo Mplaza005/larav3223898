@@ -15,7 +15,7 @@
 <label>
     Nombre:
     <br>
-    <input type="text" name="name">
+    <input type="text" name="nombre">
 </label>
 <br>
 <label>
@@ -38,6 +38,22 @@
 <br>
 <br>
 
+{{-- {{$users}} --}}
+
+<label for="user_id">Usuario</label>
+
+    <select name="user_id" id="user_id" class="form-control">
+        <option value="">Seleccione un usuario</option>
+
+        @foreach($users as $user)
+            <option value="{{ $user->id }}">
+                {{ $user->name }}
+            </option>
+        @endforeach
+    </select>
+
+<br>
+<br>
 
 <button type="submit">Crear Producto:</button>
 </form>
