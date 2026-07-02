@@ -1,12 +1,7 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>category create</title>
-</head>
-<body>
-<h1>formulario category</h1>
+@extends('layouts.app')
+
+@section('content')
+
 
 <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
 
@@ -26,7 +21,4 @@
 </form>
 
 
-
-
-</body>
-</html>
+@endsection
