@@ -8,6 +8,16 @@ use App\models\User;
 
 class ProductController extends Controller
 {
+
+    public function index(){
+
+    $products = Product::all();
+    return $products;
+
+
+    }
+
+
      public function create (){
 
     $users=User::all();
